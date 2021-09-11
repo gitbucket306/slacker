@@ -2,7 +2,7 @@ name: 'Slacker'
 description: 'Post a message to Slack'
 
 inputs:
-  message:
+  status:
     description: 'Message to send'
     required: true
     default: 'Slacker says hi!'
@@ -11,4 +11,4 @@ runs:
   using: 'docker'
   image: 'Dockerfile'
   args:
-    - ${{ inputs.message }}
+    - ${{ inputs.status }}
