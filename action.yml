@@ -2,13 +2,17 @@ name: 'Slacker'
 description: 'Post a message to Slack'
 
 inputs:
-  status:
-    description: 'Message to send'
-    required: true
+  message:
+    description: 'Message to post'
+    required: false
     default: 'Slacker says hi!'
 
 runs:
   using: 'docker'
   image: 'Dockerfile'
+
+  env:
+    SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
+
   args:
-    - ${{ inputs.status }}
+    - ${{ inputs.message }}
