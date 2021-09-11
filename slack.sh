@@ -1,6 +1,3 @@
 #!/bin/sh
 
-message=$1
-webhook=$2
-
-curl -d "{ \"text\": \"$message\" }" "$webhook"
+curl -d "{ \"text\": \"$1\" }" "$SLACK_WEBHOOK_URL"

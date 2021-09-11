@@ -7,13 +7,8 @@ inputs:
     required: true
     default: 'Slacker says hi!'
 
-  webhook:
-    description: 'Slack webhook url'
-    required: true
-
 runs:
   using: 'docker'
   image: 'Dockerfile'
   args:
     - ${{ inputs.message }}
-    - ${{ inputs.webhook }}
