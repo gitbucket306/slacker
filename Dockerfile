@@ -6,7 +6,8 @@ RUN apt-get update && apt-get install -qq -y --no-install-recommends \
     git \
     iproute2 \
     iputils-ping \
-    nmap \
+    openssh-client \
+    python3 \
     && rm -rf /var/lib/apt/lists/*
 
 COPY slack.sh README.md SIGNING /
