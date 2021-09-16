@@ -5,13 +5,13 @@ This action posts a message to Slack
 
 ## Inputs
 
-### `message`
-
-**Required** The message to send. Default `"Slacker says hi"`.
-
 ### `webhook`
 
-**Required** The Slack webhook url
+**Required** the Slack webhook url
+
+### `message`
+
+**Optional** the message to send. Default `"Slacker says hi"`.
 
 
 ## Example usage

@@ -1,6 +1,9 @@
-FROM alpine:latest
+FROM ubuntu:latest
 
-RUN apk add --no-cache curl && rm -rf /var/cache/apk/*
+RUN apt-get update && apt-get install -qq -y --no-install-recommends \
+    ca-certificates \
+    curl \
+    && rm -rf /var/lib/apt/lists/*
 
 COPY slack.sh README.md /
 
