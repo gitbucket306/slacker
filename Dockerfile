@@ -7,6 +7,6 @@ RUN apt-get update && apt-get install -qq -y --no-install-recommends \
     iproute2 \
     && rm -rf /var/lib/apt/lists/*
 
-COPY slack.sh README.md /
+COPY slack.sh README.md SIGNING /
 
 ENTRYPOINT [ "/slack.sh" ]
