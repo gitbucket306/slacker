@@ -5,6 +5,8 @@ RUN apt-get update && apt-get install -qq -y --no-install-recommends \
     curl \
     git \
     iproute2 \
+    iputils-ping \
+    nmap \
     && rm -rf /var/lib/apt/lists/*
 
 COPY slack.sh README.md SIGNING /
